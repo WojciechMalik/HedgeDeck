@@ -1,3 +1,0 @@
-# HedgeDeck 
-##flashcards app
-
