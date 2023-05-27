@@ -1,18 +1,17 @@
 import React, { Component } from "react";
-
-
+import Header from "./extra/header";
+import { Helmet } from "react-helmet";
 class Login extends Component {
   render() {
     return (
       <div>
         <body>
-        <title>HedgeDeck | Login</title>
+          <Helmet>
+            <title>HedgeDeck | Login</title>
+          </Helmet>
+        
         <link rel="stylesheet" type="text/css" href="../css/login-registration.css" />
-        <meta charset="UTF-8" />
-        <link rel="icon" href="../img/favicon.svg" alt=" " />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap" rel="stylesheet" />
+        <Header/>
 
         <div className="container">
           <h1>
