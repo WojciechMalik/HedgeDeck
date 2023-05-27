@@ -9,6 +9,9 @@ class NewSet extends React.Component {
           <title>HedgeDeck | New Set</title>
           <link rel="stylesheet" type="text/css" href="../css/new-set.css" />
           <Header/>
+          <div>
+            a
+          </div>
         </head>
         <body>
           <header>
