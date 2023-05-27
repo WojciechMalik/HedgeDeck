@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ztpai.wojciech_malik.hedgedeck.entity.Categories;
@@ -23,4 +24,8 @@ public class CategoryController {
         categoriesRepository.save(categories1);
 
     }
+
+
+//    @PutMapping("/update")
+//    public void update
 }

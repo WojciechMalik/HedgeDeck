@@ -16,6 +16,5 @@ public class UserDetailsController {
     UserDetailsRepository userDetailsRepository;
     @Autowired
     UserRepository userRepository;
-    @Autowired
-    SetRepository setRepository;
+
 }
