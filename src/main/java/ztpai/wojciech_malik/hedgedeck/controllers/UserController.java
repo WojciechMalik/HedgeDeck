@@ -37,7 +37,10 @@ public class UserController {
         return !userFromDB.get().getPassword().equals(user.getPassword());
     }
 
-
+    @GetMapping("/id/{userEmail}")
+    public int getUserIdByEmail(@PathVariable String userEmail){
+        return userRepository.findUserIdByEmail(userEmail);
+    }
 
 
 

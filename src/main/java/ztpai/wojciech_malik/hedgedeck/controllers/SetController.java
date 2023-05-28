@@ -36,6 +36,8 @@ public class SetController {
         return setRepository.findById(id_set);
     }
 
+
+
     @PostMapping("/addSet/{userId}")
     public ResponseEntity<String> addSet(@PathVariable(value = "userId") int userId, @RequestBody String setName) {
         Optional<User> userFromDB = userRepository.findById(userId);
@@ -54,9 +56,6 @@ public class SetController {
     public void deleteTaskById(@PathVariable(value = "id_set") int id_set){
          setRepository.deleteById(id_set);
     }
-
-
-
 
 
 }

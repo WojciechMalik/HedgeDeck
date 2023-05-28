@@ -2,6 +2,11 @@ import React from 'react';
 import Header from './extra/header';
 
 class NewSet extends React.Component {
+
+
+  handleButton = (href)=>{
+    window.location.href = href;
+  }
   render() {
     return (
       <div>
@@ -21,7 +26,7 @@ class NewSet extends React.Component {
             <img src="../img/new-set-hog.svg" height="200" />
           </header>
           <div className="title-container">
-            <button className="back-button">
+            <button className="back-button" onClick={() => this.handleButton('/dashboard')}>
               <img src="../img/back-icon.svg" height="32" />
             </button>
             <h2>New set</h2>

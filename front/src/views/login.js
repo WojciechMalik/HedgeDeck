@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "./extra/header";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
@@ -32,7 +32,7 @@ const Login = () => {
         axios.get("http://localhost:8082/api/users/id/" + email)
           .then(response => {
             const data = response.data;
-            Cookies.set("token", data);
+            Cookies.set("tokenId", data);
           })
           .catch(error => {
             console.error(error);

@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './extra/header';
-import Cookies from "js-cookie";
+import Cookies from 'js-cookie';
 import axios from 'axios';
 
 class Dashboard extends React.Component {
@@ -12,18 +12,25 @@ class Dashboard extends React.Component {
   componentDidMount() {
     this.fetchSets();
   }
-  
+
   fetchSets() {
     axios
-      .get("http://localhost:8082/api/set/getAllSets/" + Cookies.get('token'))
+      .get('http://localhost:8082/api/set/getAllSets/' + Cookies.get('tokenId'))
       .then(response => {
-        this.setState({ sets: response.data});
-
-        
+        this.setState({ sets: response.data });
       })
-      .catch((error) => {
+      .catch(error => {
         console.error(error);
       });
+  }
+
+  handleSetClick = (setId,href) => {
+    localStorage.setItem('idSet', JSON.stringify(setId));
+    window.location.href = href;
+  };
+
+  handleButton = (href)=>{
+    window.location.href = href;
   }
 
   render() {
@@ -46,17 +53,17 @@ class Dashboard extends React.Component {
           <h2>Your sets:</h2>
           <div className="sets-container">
             {sets.map((set) => (
-              <div className="base-container" key={set.id}>
+              <div
+                className="base-container set-link"
+                key={set.id_set}
+                onClick={() => this.handleSetClick(set.id_set,'/viewSet')}
+              >
                 <div className="set-container">
                   <div className="single-set">
                     <div className="bold-text set-text">{set.name}</div>
-                    {/* <div className="category set-text">
-                      Category:
-                      {set.categories.map((category, index) => (
-                        <span key={index}>{category}</span>
-                      ))}
-                    </div> */}
-                    <div className="phrase-counter set-text">{set.flashcards.length} phrases</div>
+                    <div className="phrase-counter set-text">
+                      {set.flashcards.length} phrases
+                    </div>
                   </div>
                 </div>
               </div>
@@ -64,11 +71,11 @@ class Dashboard extends React.Component {
           </div>
 
           <div className="button-container">
-            <button className="new-set">
+            <button className="new-set" onClick={() =>this.handleButton('/newSet')}>
               <img src="../img/newset-icon.svg" alt="new set icon" />
               New Set
             </button>
-            <button className="exit">Exit</button>
+            <button className="exit" onClick={() =>this.handleButton('/logout')}>Exit</button>
           </div>
         </body>
       </div>

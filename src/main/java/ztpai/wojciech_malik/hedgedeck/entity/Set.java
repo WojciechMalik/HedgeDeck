@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Set {
-    @JsonIgnore
+
     @Id
     @GeneratedValue
     private int id_set;
