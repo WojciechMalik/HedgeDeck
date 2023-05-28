@@ -30,9 +30,6 @@ public class Set {
     @OneToMany(mappedBy = "set")
     private List<Flashcard> flashcards;
 
-    //    usunac ignore ->newset
-
-
     @ManyToMany(mappedBy = "sets")
     private List<Categories> categories;
 
