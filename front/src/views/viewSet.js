@@ -29,13 +29,13 @@ class ViewSet extends Component{
                     </h1>
                     
                     <div className="menu">
-                        <button className="back">
+                        <button className="back" onClick={()=>this.handleButton('/dashboard')} >
                             <img src="../img/back-icon.svg" height="32" />
                         </button>
-                        <button className ="delete">
+                        <button className ="delete" onClick={()=>('')}>
                             <img src="../img/delete.svg" height="32" />
                         </button>
-                        <button>Practise
+                        <button className="practise" onClick={()=>this.handleButton('/practise')}>Practise
                             <img src="../img/practise.svg" height="32" />
                         </button>
                     </div>
@@ -52,7 +52,9 @@ class ViewSet extends Component{
                     </div>
                 </div>
                 
-                
+                <button>
+                    Save
+                </button>
             </div>
         );
     }

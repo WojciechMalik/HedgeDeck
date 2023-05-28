@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './extra/header';
 import axios from 'axios';
-
+import { Helmet } from "react-helmet";
 class Practise extends Component {
   state = {
     set: {},
@@ -61,19 +61,33 @@ class Practise extends Component {
     if (flashcards && flashcards.length > 0) {
       const currentCard = flashcards[currentCardIndex];
 
-      if (completed) {
-        return (
-          <div>
-            <Header />
-            <div>{set.name}</div>
-            <div>Brawo! Ukończyłeś zestaw</div>
-          </div>
-        );
-      }
-
       return (
         <div>
-          <Header />
+
+                <Helmet>
+                    <title>HedgeDeck | View Set</title>
+                </Helmet>
+                
+                <link rel="stylesheet" type="text/css" href="../css/new-set.css" />
+                <Header/>
+    
+                
+                    <nav >
+
+                    
+                    <h1>
+                    <span>Hedge</span>Deck
+                    </h1>
+                    
+                    <div className="menu">
+                        <button className="back" onClick={()=>this.handleButton('/viewSet')} >
+                            <img src="../img/back-icon.svg" height="32" />
+                        </button>
+                        <Header />
+                    </div>
+                    </nav>
+
+
           <div>{set.name}</div>
           <div>
             <button onClick={this.handlePreviousCard} disabled={currentCardIndex === 0}>
