@@ -2,16 +2,13 @@ package ztpai.wojciech_malik.hedgedeck.controllers;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ztpai.wojciech_malik.hedgedeck.entity.Set;
 import ztpai.wojciech_malik.hedgedeck.repositories.FlashcardRepository;
 import ztpai.wojciech_malik.hedgedeck.repositories.SetRepository;
 
 import java.util.Optional;
-
+@CrossOrigin("http://localhost:3000")
 @Tag(name = "Flashcard")
 @RestController
 @RequestMapping("/api/flashcard")

@@ -14,7 +14,7 @@ import ztpai.wojciech_malik.hedgedeck.repositories.UserRepository;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin("http://localhost:3000")
 @Tag(name = "Set")
 @RestController
 @RequestMapping("/api/set")

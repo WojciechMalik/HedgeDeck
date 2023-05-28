@@ -10,7 +10,7 @@ import ztpai.wojciech_malik.hedgedeck.entity.User;
 import ztpai.wojciech_malik.hedgedeck.repositories.UserRepository;
 
 import java.util.Optional;
-
+@CrossOrigin("http://localhost:3000")
 @Tag(name = "Users")
 @RestController
 @RequestMapping("/api/users")
