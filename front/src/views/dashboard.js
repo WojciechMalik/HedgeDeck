@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './extra/header';
 import Cookies from 'js-cookie';
 import axios from 'axios';
+import { Helmet } from "react-helmet";
 
 class Dashboard extends React.Component {
   state = {
@@ -39,7 +40,9 @@ class Dashboard extends React.Component {
     return (
       <div>
         <head>
-          <title>HedgeDeck | Dashboard</title>
+          <Helmet>
+            <title>HedgeDeck | Dashboard</title>
+          </Helmet>
           <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
           <Header />
         </head>
@@ -51,31 +54,29 @@ class Dashboard extends React.Component {
             <img src="../img/dashboard-hog.svg" height="200" alt='' />
           </header>
           <h2>Your sets:</h2>
-          <div className="sets-container">
-            {sets.map((set) => (
-              <div
-                className="base-container set-link"
-                key={set.id_set}
-                onClick={() => this.handleSetClick(set.id_set,'/viewSet')}
-              >
-                <div className="set-container">
-                  <div className="single-set">
-                    <div className="bold-text set-text">{set.name}</div>
-                    <div className="phrase-counter set-text">
-                      {set.flashcards.length} phrases
-                    </div>
+          <div className="base-container">
+            <div className= "set-container">
+              {sets.map((set) => (
+                <div className="single-set set-link"
+                  key={set.id_set}
+                  onClick={() => this.handleSetClick(set.id_set,'/viewSet')}
+                >
+                  <div className="bold-text set-text">{set.name}</div>
+                  <div className="phrase-counter set-text">
+                    {set.flashcards.length} phrases
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          
 
-          <div className="button-container">
-            <button className="new-set" onClick={() =>this.handleButton('/newSet')}>
-              <img src="../img/newset-icon.svg" alt="new set icon" />
-              New Set
-            </button>
-            <button className="exit" onClick={() =>this.handleButton('/logout')}>Exit</button>
+            <div className="button-container">
+              <button className="new-set" onClick={() =>this.handleButton('/newSet')}>
+                <img src="../img/newset-icon.svg" alt="new set icon" />
+                New Set
+              </button>
+              <button className="exit" onClick={() =>this.handleButton('/logout')}>Exit</button>
+            </div>
           </div>
         </body>
       </div>

@@ -18,7 +18,7 @@ class Registration extends Component {
         <body>
           <div className="container">
             <h1>
-              Welcome to <span><br /></span>HedgeDeck!
+              Welcome to <br /><span>Hedge</span>Deck!
             </h1>
             <form action="registration" method="POST">
               <div className="input-container">

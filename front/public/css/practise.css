@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+}
+
+header{
+    color:black;
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    justify-content: space-between;
+    margin: 1% 7.5% 0 5%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+header span{
+    color: #51D2BC;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    margin: 0 5% 0 5%;
+}
+
+.menu-button{
+    margin-right: 2rem;
+    padding: 0;
+    height: 48px;
+    width: 48px;
+    align-self: center;
+    border-radius: 15px;
+    background-color: #4E4438;
+}
+
+.base-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5% 0 5%;
+    height: 70vh;
+}
+
+.setName{
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+.flashcard-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.flashcard{
+    background-color: #4E4438;
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbutton{
+    height: 75%;
+    width: 15%;
+    text-align: center;
+}
+
+.navbutton button{
+    height: 100%;
+    font-size: 2rem;
+    background-color: #4E4438;
+    border-radius: 60px;
+    border: none;
+    
+}
+
+.middle{
+    color:#F6F6F6;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0 2rem 0;
+
+}
+
+.flipper{
+    background-color: #4E4438;
+    height: 2rem;
+    width: 10rem;
+    border: none;
+    border-radius: 20px;
+    color: #F6F6F6;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.text{
+    height: 60%;
+    width: 90%;
+    overflow-y: auto;
+    word-wrap: break-word;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
