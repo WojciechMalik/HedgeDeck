@@ -116,7 +116,7 @@ class Practise extends Component {
 
                                     <div className="flashcard">
                                         <div className="previous navbutton">
-                                            <button onClick={this.handlePreviousCard} disabled={currentCardIndex === 0}>
+                                            <button onClick={this.handlePreviousCard}>
                                             <img src="../img/left-arrow.svg"/>
                                             </button>
                                         </div>
@@ -126,7 +126,7 @@ class Practise extends Component {
                                             <button class = "flipper" onClick={this.handleClick}>Flip Card</button>
                                         </div>
                                         <div className="next navbutton">
-                                            <button onClick={this.handleNextCard} disabled={currentCardIndex === flashcards.length - 1}>
+                                            <button onClick={this.handleNextCard}>
                                             <img src="../img/right-arrow.svg"/>
                                             </button>
                                         </div>
