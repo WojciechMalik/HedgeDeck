@@ -27,11 +27,12 @@ h1{
     margin-bottom: 50px;
 }
 
-a{
+.login-link{
     color: #51D2BC;
     text-decoration: none;
 
 }
+
 span{
     color: #51D2BC;
 }
@@ -95,6 +96,7 @@ button{
     border-radius: 1em;
     box-shadow: 0 0 0.2em red;
 }
+
 #mem{
     justify-self: center;
     align-self: center;

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./extra/header";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import Cookies from "js-cookie";
 import axios from 'axios';
 
@@ -76,7 +77,7 @@ const Login = () => {
 
           <button type="submit">Login</button>
         </form>
-        <p>Don't have an account? <a href="registration">Sign Up</a></p>
+        <p>Don't have an account? <Link to="/registration" className="login-link">Sign Up</Link></p>
       </div>
       <img src="../../img/login_registration_picture.png" id="mem" alt="" />
       </body>

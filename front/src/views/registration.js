@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Header from './extra/header';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 class Registration extends Component {
 
@@ -44,7 +45,7 @@ class Registration extends Component {
               <button type="submit">Submit</button>
             </form>
             <p>
-              Already have an account? <a href="login">Login</a>
+              Already have an account? <Link to="/" className="login-link">Login</Link>
             </p>
           </div>
           <img src="../img/login_registration_picture.png" id="mem" />
