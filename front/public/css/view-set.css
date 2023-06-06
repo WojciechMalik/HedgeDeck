@@ -117,7 +117,60 @@ input{
     font-size: 1.5rem;
     text-align: center;
     line-height: 2.25rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
     margin-left: 2.5%;
+}
+
+#addFlashcard{
+    background-color: #4E4438;
+    color: #F6F6F6;
+    margin-top: 1rem;
+    border-radius: 40px;
+    width: 15rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    font-size: 1.5rem;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+    align-self: center;
+    justify-self: center;
+}
+
+
+@media only screen and (max-device-width: 420px) {
+    h1{
+        margin: 2rem 0 1rem 0;
+    }
+
+    header img{
+        display: none;
+    }
+
+    #save{
+        align-self: center;
+        justify-self: center;
+        margin-left: 0;
+    }
+
+    input{
+        font-size: 1.25rem;
+    }
+    .menu{
+        width: 100%;
+        justify-content: space-around;
+        margin: 0;
+    }
+
+    .menu-button{
+        margin-right: 0;
+    }
+
+    select{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .base-container{
+        height: 75vh;
+    }
 }

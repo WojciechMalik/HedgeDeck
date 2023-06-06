@@ -37,6 +37,19 @@ public class UserController {
         return !userFromDB.get().getPassword().equals(user.getPassword());
     }
 
+    @PostMapping("/add_user")
+    public ResponseEntity addUser(@RequestBody User user){
+        Optional<User> userFromDB = userRepository.findUserByEmail(user.getEmail());
+
+        if(!userFromDB.isEmpty()){
+            return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).build();
+        }
+        User savedUser = userRepository.save(user);
+
+        return ResponseEntity.ok(savedUser);
+    }
+
+
     @GetMapping("/id/{userEmail}")
     public int getUserIdByEmail(@PathVariable String userEmail){
         return userRepository.findUserIdByEmail(userEmail);

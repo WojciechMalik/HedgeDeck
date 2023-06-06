@@ -10,7 +10,6 @@ import java.util.List;
 @Entity
 @Table(name = "categories")
 public class Categories {
-    @JsonIgnore
     @Id
     @GeneratedValue
     private int id_category;
@@ -18,12 +17,7 @@ public class Categories {
     private String name;
 
     @JsonIgnore
-    @ManyToMany
-    @JoinTable(
-            name = "sets_categories",
-            joinColumns = @JoinColumn(name = "id_set"),
-            inverseJoinColumns = @JoinColumn(name = "id_category")
-    )
+    @OneToMany(mappedBy = "categories")
     private List<Set> sets;
 
     public Categories(String name) {
@@ -31,6 +25,5 @@ public class Categories {
     }
 
     public Categories() {
-
     }
 }

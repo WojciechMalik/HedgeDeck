@@ -45,6 +45,7 @@ h2{
     height: 100%;
     gap: 2rem;
     align-content: flex-start;
+    overflow: auto;
 }
 
 .single-set{
@@ -57,18 +58,21 @@ h2{
 
 .set-text{
     margin-left: 10%;
+    margin-right: 10%;
     color: #F6F6F6;
 }
 
 .bold-text{
     margin-top: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
+    height: 3rem;
+    overflow: hidden;
 }
 
-.category{
+.category-name{
     font-size: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
 
 }
 
@@ -120,4 +124,60 @@ button img{
     flex-direction: column;
     width: 20%;
     align-items: center;
+}
+
+@media only screen and (max-device-width: 420px) {
+
+    h1{
+        margin: 2rem 0 1rem 0;
+    }
+
+    header img{
+        display: none;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .base-container{
+        flex-direction: column;
+        height: 75vh;
+    }
+    .set-container{
+        width: 100%;
+        align-content: space-between;
+        gap: 1rem;
+    }
+
+    .single-set{
+        width: 45%;
+        height: 175px; 
+    }
+
+    .button-container{
+        flex-direction: row;
+        width: 100%;
+        margin-top: 2rem;
+        justify-content: space-around;
+    }
+
+    .exit{
+        margin: 0;
+    }
+
+    .button-container button{
+        width: 45%;
+    }
+
+    .bold-text{
+        font-size: 1rem;
+        height: 2.5rem;
+    }
+    .category-name{
+        font-size: 0.5rem;
+    }
+    .phrase-counter{
+        font-size: 0.5rem;
+    }
 }

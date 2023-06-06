@@ -1,8 +1,8 @@
-import React from 'react';
+import React,{Component} from 'react';
 import Header from './extra/header';
 import { Helmet } from "react-helmet";
 
-class NewSet extends React.Component {
+class NewSet extends Component {
 
 
   handleButton = (href)=>{

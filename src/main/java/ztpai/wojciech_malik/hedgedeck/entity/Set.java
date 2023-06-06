@@ -17,27 +17,26 @@ public class Set {
 
     @Id
     @GeneratedValue
-    private int id_set;
+    @Column(name = "id_set")
+    private int idSet;
 
     private String name;
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "id_user")
+    @JoinColumn(name = "id_user", referencedColumnName = "id_user")
     private User user;
 
+    @ManyToOne
+    @JoinColumn(name = "id_category", referencedColumnName = "id_category")
+    private Categories categories;
 
     @OneToMany(mappedBy = "set")
     private List<Flashcard> flashcards;
 
-    @ManyToMany(mappedBy = "sets")
-    private List<Categories> categories;
-
-    public Set(String name, User user) {
+    public Set(String name, User user, Categories categories) {
         this.name = name;
         this.user = user;
+        this.categories = categories;
     }
-
-
-
 }
