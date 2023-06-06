@@ -51,10 +51,6 @@ h2{
     height: 65vh;
 }
 
-form{
-    height: 100%;
-}
-
 .element{
     margin-top: 1rem;
 }
@@ -99,7 +95,7 @@ input{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 55%;
+    height: 60%;
 }
 
 .term-container{
@@ -108,23 +104,18 @@ input{
     height: 100%;
 }
 
-#next-button{
-    background-color: #EAEAEA;
-    margin-left: 1rem;
-    color: #808080;
-    border:none;
-    border-radius: 50px;
-    font-size: 1.25rem;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    width: 5rem;
-}
-
 .single-term{
     margin-top: 1.25rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.buttons-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 #save{
@@ -137,7 +128,61 @@ input{
     font-size: 1.5rem;
     text-align: center;
     line-height: 2.25rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
     margin-left: 2.5%;
+    align-self: flex-start;
+}
+
+#addFlashcard{
+    background-color: #4E4438;
+    color: #F6F6F6;
+    margin-top: 1rem;
+    border-radius: 40px;
+    width: 15rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    font-size: 1.5rem;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+    align-self: center;
+}
+
+
+@media only screen and (max-device-width: 420px) {
+    body{
+        height: 100vh;
+    }
+    
+    h1{
+        margin: 0;
+    }
+
+    header{
+        margin: 2rem auto 1rem auto;
+    }
+    header img{
+        display: none;
+    }
+
+    #save{
+        align-self: center;
+        justify-self: center;
+        margin-left: 0;
+    }
+
+    input{
+        font-size: 1.25rem;
+    }
+
+    select{
+        font-size: 1.25rem;
+        width: 100%;
+    }
+    #title{
+        width: 90%;
+    }
+
+    .base-container{
+        height: 100%;
+    }
 }

@@ -16,7 +16,7 @@ const Practise = () => {
 
   useEffect(() => {
     if (!Cookies.get('tokenId')) {
-      navigate('/login');
+      navigate('/');
     } else {
       fetchSet();
     }
@@ -31,7 +31,8 @@ const Practise = () => {
     axios
       .get('http://localhost:8082/api/set/getSet/' + localStorage.getItem('idSet'))
       .then(response => {
-        setSet(response.data);
+        const sortedFlashcards = response.data.flashcards.sort((a, b) => a.id_flashcard - b.id_flashcard);
+        setSet({ ...response.data, flashcards: sortedFlashcards });
       })
       .catch(error => {
         console.error(error);

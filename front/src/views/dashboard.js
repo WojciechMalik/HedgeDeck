@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (!Cookies.get('tokenId')) {
-      navigate('/login');
+      navigate('/');
     } else {
       fetchSets();
     }
@@ -37,7 +37,7 @@ const Dashboard = () => {
   const handleButton = href => {
     if (href === '/logout') {
       Cookies.remove('tokenId'); 
-      navigate('/login');
+      navigate('/');
     } else {
       window.location.href = href;
     }
@@ -80,7 +80,7 @@ const Dashboard = () => {
                     onClick={() => handleSetClick(set.idSet, '/viewSet')}
                   >
                     <div className="bold-text set-text">{set.name}</div>
-                    <div className="category-name set-text">Category Name</div>
+                    <div className="category-name set-text">{set.categories.name}</div>
                     <div className="phrase-counter set-text">
                       {set.flashcards.length} phrases
                     </div>

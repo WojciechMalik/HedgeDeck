@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const ViewSet = () => {
     const navigate = useNavigate();
-    const [setId, setSetId] = useState(null); // Dodany stan setId
+    const [setId, setSetId] = useState(null); 
     const [set, setSet] = useState({});
     const [loading, setLoading] = useState(false);
     const [flashcards, setFlashcards] = useState([]);
@@ -21,8 +21,6 @@ const ViewSet = () => {
         setSelectedCategoryId(event.target.value);
     };
 
-
-
     const handleButton = (href) => {
         window.location.href = href;
     };
@@ -31,7 +29,7 @@ const ViewSet = () => {
         if (!localStorage.getItem("idSet")) {
             navigate("/dashboard");
         } else if (!Cookies.get('tokenId')) {
-            navigate('/login');
+            navigate('/');
         } else {
             console.log(localStorage.getItem('idSet')); // Dodaj ten console.log
             fetchSet();
@@ -71,11 +69,6 @@ const ViewSet = () => {
             setLoading(false);
         }, 2000);
     }, []);
-
-    useEffect(() => {
-        console.log(flashcards);
-        console.log(set);
-    }, [flashcards, set]);
 
     const handleAddFlashcard = () => {
         setNewFlashcards(prevFlashcards => [...prevFlashcards, { term: '', definition: '' }]);
@@ -189,7 +182,6 @@ const ViewSet = () => {
                         </button>
                     </div>
                     <div className="base-container">
-                        <form action="modifySet" method="POST" />
                         <div className="first-row">
                             <div className="fr-container">
                                 <label htmlFor="title">Title:</label>

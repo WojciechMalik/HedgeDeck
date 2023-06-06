@@ -73,6 +73,7 @@ h2{
 .category-name{
     font-size: 1rem;
     margin-top: 0.75rem;
+    height: 2.5rem;
 
 }
 
@@ -175,9 +176,15 @@ button img{
         height: 2.5rem;
     }
     .category-name{
-        font-size: 0.5rem;
+        font-size: 0.75rem;
+        height: 2rem;
+        line-height: 0.75rem;
     }
     .phrase-counter{
-        font-size: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .phrase-counter{
+        height: 1.75rem;
     }
 }
