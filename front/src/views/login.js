@@ -35,8 +35,10 @@ const Login = () => {
           .catch(error => {
             console.error(error);
           });
-
-        navigate("/dashboard", { replace: true });
+        setTimeout(() => {
+          navigate("/dashboard", { replace: true });
+        }, 2000);
+        
       })
       .catch(error => {
         console.error(error);
